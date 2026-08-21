@@ -1,13 +1,14 @@
 # 常守瑜 Aria Chang — Academic Profile
 
-一個零建置依賴、可直接部署到 GitHub Pages 的雙語學術／專業資料網站。
+一個零建置依賴、可直接部署到 GitHub Pages 的雙語申請資料與佐證索引。
 
 ## 隱私原則
 
 - 公開 repository 只存放網站程式與公開摘要。
 - 學位證書、成績單、證照、申請底稿及其他佐證均由 `.gitignore` 排除。
-- 私人 Google Drive 的 folder ID、file ID 與檔案網址不寫入公開網站。
-- 網站只標示「佐證已備妥」，需要時再由本人提供。
+- 網站可保存 owner-only Google Drive 檔案的檢視網址，方便本人快速開啟佐證。
+- 檔案網址雖可從公開原始碼看見，但文件本身維持 `not_shared`；不得為了網站功能放寬 Drive 權限。
+- 新增或更換佐證時，先確認檔案仍為 owner-only，再更新 `data/profile.js`。
 
 ## 更新內容
 
@@ -17,8 +18,8 @@
 - `title.zh` / `title.en`：中英文名稱
 - `organization.zh` / `organization.en`：機構或出處
 - `type.zh` / `type.en`：紀錄類型
-- `evidence`：是否已有私人佐證
-- `link`：選填；只放 DOI、論文典藏等原本就公開的連結
+- `evidence`：私人佐證的名稱與 owner-only Drive URL，可有多筆
+- `publicLinks`：選填；放 DOI、論文典藏等原本就公開的來源
 
 ## 本機預覽
 
