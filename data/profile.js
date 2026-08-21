@@ -23,6 +23,11 @@ window.PROFILE_DATA = {
       title: { zh: "學歷、學位證書與成績單", en: "Education, Degrees & Transcripts" },
       items: [
         {
+          date: "2025/09/01–", title: { zh: "博士班研究生（政法組）", en: "PhD Student, Policy and Law Division" },
+          organization: { zh: "國立陽明交通大學醫學院公共衛生研究所；指導教授：梁立霖", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University; Advisor: Prof. Li-Lin Liang" }, type: { zh: "博士班", en: "Doctoral study" },
+          missingEvidence: true
+        },
+        {
           date: "2022", title: { zh: "高齡福祉科技碩士", en: "Master’s Degree in Gerontechnology" },
           organization: { zh: "馬偕醫學院 高齡福祉科技研究所", en: "Graduate Institute of Gerontechnology, Mackay Medical College" }, type: { zh: "學位", en: "Degree" },
           evidence: [
@@ -56,6 +61,7 @@ window.PROFILE_DATA = {
       id: "research",
       title: { zh: "研究與著作", en: "Research & Publications" },
       items: [
+        { date: "2025–", title: { zh: "博士論文研究：微隨機對照試驗設計", en: "Doctoral Research: Micro-Randomized Trial Design" }, organization: { zh: "國立陽明交通大學公共衛生研究所；指導教授：梁立霖", en: "Institute of Public Health, National Yang Ming Chiao Tung University; Advisor: Prof. Li-Lin Liang" }, type: { zh: "博士研究", en: "Doctoral research" }, missingEvidence: true },
         { date: "2025", title: { zh: "以虛擬實境提升機構失智照護者之同理與能力：先驅研究", en: "Enhancing Formal Caregiver Empathy and Competence in Institutional Dementia Care Through Virtual Reality: A Pilot Study" }, organization: { zh: "11th Asian Conference on Aging & Gerontology，日本東京（與 Yi-Heng Chen 合著）", en: "11th Asian Conference on Aging & Gerontology, Tokyo (with Yi-Heng Chen)" }, type: { zh: "壁報發表", en: "Poster" }, missingEvidence: true },
         { date: "2023", title: { zh: "以科技強化獨居長者送餐服務之照護焦點取向", en: "Technology-enhanced care focus approach to meal delivery for solitary seniors" }, organization: { zh: "2023 高齡科技研討會，台北", en: "2023 Conference on Gerontechnology, Taipei" }, type: { zh: "口頭發表", en: "Oral presentation" }, evidence: [{ label: { zh: "發表資料 PDF", en: "Presentation record PDF" }, url: "https://drive.google.com/file/d/1eGEXbN65czn-IoWgSTzUeNpfaifwynYS/view" }, { label: { zh: "發表簡報 PPTX", en: "Presentation PPTX" }, url: "https://docs.google.com/presentation/d/1vzHaG3kOXpiwxOa86W2v6MeMKzTuHwAz/edit?usp=drivesdk" }] },
         { date: "2022", title: { zh: "獨居老人送餐服務：為送餐員需求架構的行動應用與資訊平台設計", en: "Meal Delivery Services for Elderly People Living Alone: Designing a Mobile Application and Information Platform for Delivery Workers" }, organization: { zh: "馬偕醫學院高齡福祉科技研究所碩士論文", en: "Master’s thesis, Graduate Institute of Gerontechnology, Mackay Medical College" }, type: { zh: "碩士論文", en: "Master’s thesis" }, evidence: [{ label: { zh: "論文全文 PDF", en: "Full thesis PDF" }, url: "https://drive.google.com/file/d/1qitky15-DzB3SvdUF7balEFsRaSU5BTb/view" }], publicLinks: [{ label: { zh: "論文典藏", en: "Thesis record" }, url: "https://hdl.handle.net/11296/s93fu3" }] },
@@ -68,6 +74,7 @@ window.PROFILE_DATA = {
       id: "projects",
       title: { zh: "研究計畫", en: "Research Projects" },
       items: [
+        { date: "2026", title: { zh: "實驗室研究計畫之 AI 系統與技術支援", en: "AI Systems and Technical Support for Laboratory Research Projects" }, organization: { zh: "參與 AI 系統架構梳理、流程圖繪製與程式碼解析，整合資訊工程與公共衛生研究", en: "Contributed AI system architecture mapping, workflow diagrams, and code analysis, integrating computing and public health research" }, type: { zh: "實驗室研究", en: "Laboratory research" }, missingEvidence: true },
         { date: "2022–2025", title: { zh: "虛擬實境情境模擬訓練與失智症行為心理症狀未滿足需求管理", en: "Virtual-reality simulation training and unmet-needs management for behavioral and psychological symptoms of dementia" }, organization: { zh: "國科會三年期研究計畫；計畫主持人：陳怡亨教授", en: "Three-year NSTC project; Principal Investigator: Prof. Yi-Heng Chen" }, type: { zh: "研究參與", en: "Research collaboration" }, missingEvidence: true },
         { date: "2020–2021", title: { zh: "以社會支持架構建置育齡乳癌女性生育保存決策之行動工具", en: "A social-support-based mobile tool for oncofertility decision support among reproductive-age women with breast cancer" }, organization: { zh: "科技部研究計畫；計畫主持人：黃聖妙教授", en: "MOST project; Principal Investigator: Prof. Sheng-Miauh Huang" }, type: { zh: "研究參與", en: "Research collaboration" }, missingEvidence: true }
       ]
@@ -75,6 +82,7 @@ window.PROFILE_DATA = {
     {
       id: "conferences", title: { zh: "研討會發表", en: "Conference Presentations" },
       items: [
+        { date: "2026/10/21–23", title: { zh: "Transforming Obesogenic Environments: Integrating Fitness, Nutrition and Systems Epidemiology", en: "Transforming Obesogenic Environments: Integrating Fitness, Nutrition and Systems Epidemiology" }, organization: { zh: "APACPH Conference，台南", en: "APACPH Conference, Tainan, Taiwan" }, type: { zh: "受邀講者", en: "Invited Speaker" }, missingEvidence: true },
         { date: "2025", title: { zh: "11th Asian Conference on Aging & Gerontology", en: "11th Asian Conference on Aging & Gerontology" }, organization: { zh: "日本東京", en: "Tokyo, Japan" }, type: { zh: "壁報發表", en: "Poster" } },
         { date: "2023", title: { zh: "Conference on Gerontechnology", en: "Conference on Gerontechnology" }, organization: { zh: "台北", en: "Taipei, Taiwan" }, type: { zh: "口頭發表", en: "Oral presentation" } },
         { date: "2022", title: { zh: "高齡福祉科技研討會", en: "Conference on Gerontechnology and Welfare Technology" }, organization: { zh: "台北", en: "Taipei, Taiwan" }, type: { zh: "口頭發表", en: "Oral presentation" } },
