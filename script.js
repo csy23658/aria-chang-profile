@@ -10,7 +10,7 @@
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "連結可以公開，文件仍然私人",
       vaultCopy: "每個 ↗ 圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。",
       privacyShort: "連結可見；文件僅本人可開啟", export: "下載 CSV",
-      privateEvidence: "私人佐證", publicSource: "公開來源", noResults: "找不到符合的紀錄",
+      privateEvidence: "私人佐證", publicSource: "公開來源", missingDirect: "尚缺直接佐證", noResults: "找不到符合的紀錄",
       resultCount: count => `顯示 ${count} 筆`,
       footer: "本頁是申請資料索引；佐證連結可見，但 Google Drive 文件維持僅限本人存取。",
       newWindow: "在新視窗開啟"
@@ -23,7 +23,7 @@
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "Links are visible; documents remain private",
       vaultCopy: "Each ↗ icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request.",
       privacyShort: "Links are visible; files are owner-only", export: "Download CSV",
-      privateEvidence: "Private evidence", publicSource: "Public source", noResults: "No matching records",
+      privateEvidence: "Private evidence", publicSource: "Public source", missingDirect: "Direct evidence needed", noResults: "No matching records",
       resultCount: count => `${count} records shown`,
       footer: "This is an application record index. Evidence links are visible, while Google Drive files remain owner-only.",
       newWindow: "Open in a new window"
@@ -83,6 +83,7 @@
               <div class="record-actions">
                 ${renderLinks(item.evidence, "evidence")}
                 ${renderLinks(item.publicLinks, "public")}
+                ${item.missingEvidence ? `<span class="missing-link">${ui[state.language].missingDirect}</span>` : ""}
               </div>
             </article>`;
           }).join("")}
@@ -123,7 +124,7 @@
     const header = state.language === "zh" ? ["年份", "項目", "機構／出處", "類型", "佐證名稱", "佐證連結", "公開來源"] : ["Year", "Item", "Organization / Source", "Type", "Evidence", "Evidence URL", "Public source"];
     const rows = section.items.map(item => [
       item.date, text(item.title), text(item.organization), text(item.type),
-      (item.evidence || []).map(link => text(link.label)).join("；"),
+      item.missingEvidence ? ui[state.language].missingDirect : (item.evidence || []).map(link => text(link.label)).join("；"),
       (item.evidence || []).map(link => link.url).join("；"),
       (item.publicLinks || []).map(link => link.url).join("；")
     ]);

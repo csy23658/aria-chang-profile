@@ -78,6 +78,7 @@ a:hover { color: var(--accent); }
 .record-link:hover, .record-link:focus-visible { border-color: var(--green); background: var(--green-soft); }
 .record-link.public { border-color: #d7c1b9; color: #7d3b2d; }
 .record-link.public:hover, .record-link.public:focus-visible { border-color: var(--accent); background: #f2e5df; }
+.missing-link { display: inline-flex; align-items: center; min-height: 1.9rem; padding: .22rem .5rem; border: 1px dashed #c9a59a; border-radius: .35rem; color: #8a4d3f; font-size: .68rem; }
 
 footer { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem !important; padding: 1.2rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .75rem; }
 footer p { margin: 0; }
