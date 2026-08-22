@@ -10,6 +10,7 @@
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "連結可以公開，文件仍然私人",
       vaultCopy: "每個📎圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。灰色📎表示尚缺佐證。",
       privacyShort: "連結可見；文件僅本人可開啟", export: "下載 CSV",
+      fmPosition: "現職", fmAffiliation: "所屬單位", fmAddress: "地址", fmAdvisor: "指導教授", fmOrcid: "ORCID", fmInterests: "研究興趣",
       privateEvidence: "私人佐證", publicSource: "公開來源", missingDirect: "尚缺直接佐證", filterMissing: "只顯示待補", noResults: "找不到符合的紀錄",
       resultCount: count => `顯示 ${count} 筆`,
       footer: "本頁是申請資料索引；佐證連結可見，但 Google Drive 文件維持僅限本人存取。",
@@ -23,6 +24,7 @@
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "Links are visible; documents remain private",
       vaultCopy: "Each 📎 icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request. A grey 📎 means evidence is still needed.",
       privacyShort: "Links are visible; files are owner-only", export: "Download CSV",
+      fmPosition: "Position", fmAffiliation: "Affiliation", fmAddress: "Address", fmAdvisor: "Advisor", fmOrcid: "ORCID", fmInterests: "Research Interests",
       privateEvidence: "Private evidence", publicSource: "Public source", missingDirect: "Direct evidence needed", filterMissing: "Missing only", noResults: "No matching records",
       resultCount: count => `${count} records shown`,
       footer: "This is an application record index. Evidence links are visible, while Google Drive files remain owner-only.",
@@ -61,6 +63,21 @@
          aria-label="${escapeHtml(prefix)}：${escapeHtml(text(link.label))} — ${ui[state.language].newWindow}">
         ${kind === "evidence" ? clipSvg : '<span aria-hidden="true">↗</span>'}<span>${escapeHtml(text(link.label))}</span>
       </a>`).join("");
+  }
+
+  function renderFrontMatter() {
+    const fm = data.frontMatter;
+    if (!fm) return;
+    const t = ui[state.language];
+    const orcidUrl = fm.orcid && fm.orcid !== "0000-0000-0000-0000" ? `https://orcid.org/${fm.orcid}` : null;
+    document.getElementById("front-matter").innerHTML = `<dl class="fm-grid">
+      <div><dt>${escapeHtml(t.fmPosition)}</dt><dd>${escapeHtml(text(fm.position))}</dd></div>
+      <div><dt>${escapeHtml(t.fmAffiliation)}</dt><dd>${escapeHtml(text(fm.affiliation))}</dd></div>
+      <div><dt>${escapeHtml(t.fmAddress)}</dt><dd>${escapeHtml(text(fm.address))}</dd></div>
+      <div><dt>${escapeHtml(t.fmAdvisor)}</dt><dd>${escapeHtml(text(fm.advisor))}</dd></div>
+      <div><dt>${escapeHtml(t.fmOrcid)}</dt><dd>${orcidUrl ? `<a href="${escapeHtml(orcidUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(fm.orcid)}</a>` : '<span class="fm-placeholder">—</span>'}</dd></div>
+      <div><dt>${escapeHtml(t.fmInterests)}</dt><dd>${escapeHtml(text(fm.interests))}</dd></div>
+    </dl>`;
   }
 
   function renderSections() {
@@ -117,6 +134,7 @@
     languageButton.textContent = state.language === "zh" ? "EN" : "中文";
     languageButton.setAttribute("aria-label", state.language === "zh" ? "Switch to English" : "切換為中文");
     renderNavigation();
+    renderFrontMatter();
     renderSections();
     applySearch();
   }

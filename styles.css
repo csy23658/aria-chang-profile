@@ -53,6 +53,16 @@ a:hover { color: var(--accent); }
 .filter-button.active { border-color: var(--accent); background: #faf0ec; color: var(--accent); font-weight: 700; }
 .result-count { flex: 0 0 auto; color: var(--muted); font-size: .8rem; }
 
+.front-matter { margin-top: .65rem; padding: .7rem .9rem; border: 1px solid var(--line); border-radius: .4rem; background: white; }
+.fm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .1rem .7rem; margin: 0; }
+.fm-grid > div { display: flex; gap: .5rem; padding: .3rem 0; border-bottom: 1px solid #eef1ee; }
+.fm-grid > div:nth-last-child(-n+2) { border-bottom: 0; }
+.fm-grid dt { flex: 0 0 5.5rem; color: var(--muted); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding-top: .1rem; }
+.fm-grid dd { margin: 0; font-size: .82rem; }
+.fm-grid a { color: var(--green); text-decoration: underline; text-underline-offset: .15em; }
+.fm-grid a:hover { color: var(--accent); }
+.fm-placeholder { color: var(--line); }
+
 .vault-banner { display: grid; grid-template-columns: minmax(13rem,.65fr) 1.35fr; gap: 1rem; align-items: center; margin-top: .65rem; padding: .65rem .8rem; border-left: 3px solid var(--green); background: var(--green-soft); }
 .vault-banner h2, .vault-banner p { margin: 0; }
 .vault-banner h2 { font-family: Georgia, "Noto Serif TC", serif; font-size: .95rem; }
@@ -105,6 +115,7 @@ footer p { margin: 0; }
 
 @media (max-width: 620px) {
   .utility-bar, .vault-banner { display: block; }
+  .fm-grid { grid-template-columns: 1fr; }
   .result-count { display: block; margin-top: .5rem; }
   .vault-banner > p { margin-top: .55rem; }
   .record-row { grid-template-columns: 1fr; gap: .2rem; padding: .85rem 0; }
@@ -122,6 +133,7 @@ footer p { margin: 0; }
   .sidebar-summary { margin: .1rem 0 0; color: var(--muted); }
   .main-content { margin: 0; padding: 0; }
   .hero { padding: .8rem 0; }
+  .front-matter { border: 0; padding: 0; }
   .vault-banner { break-inside: avoid; }
   .profile-section { margin-top: 1.4rem; }
   .record-row { break-inside: avoid; grid-template-columns: 5.5rem 1fr 12rem; padding: .45rem 0; }

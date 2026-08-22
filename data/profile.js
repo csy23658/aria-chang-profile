@@ -1,23 +1,13 @@
-const REVIEW_DOC = "https://docs.google.com/document/d/1Qootz2URHyhRHaJOYVqKBuT_82H1DXHx/edit?usp=drivesdk";
-
 window.PROFILE_DATA = {
+  frontMatter: {
+    position: { zh: "博士班研究生", en: "PhD Student" },
+    affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },
+    address: { zh: "112 台北市北投區立農街二段 155 號", en: "No. 155, Sec. 2, Linong St., Beitou Dist., Taipei 112, Taiwan" },
+    advisor: { zh: "指導教授：梁立霖", en: "Advisor: Prof. Li-Lin Liang" },
+    orcid: "0000-0000-0000-0000",
+    interests: { zh: "公共衛生、老年科技、虛擬實境照護、數位健康", en: "Public Health, Gerontechnology, VR-based Care, Digital Health" }
+  },
   sections: [
-    {
-      id: "application-kit",
-      title: { zh: "申請工作檔", en: "Application Working Files" },
-      items: [
-        {
-          date: "更新中", title: { zh: "申請工作底稿", en: "Application Working Draft" },
-          organization: { zh: "含個人資料與歷次申請內容的私人工作檔", en: "Private working file containing personal details and prior application content" }, type: { zh: "工作底稿", en: "Working file" },
-          evidence: [{ label: { zh: "工作底稿 PPTX", en: "Working draft PPTX" }, url: "https://docs.google.com/presentation/d/1mvpHjaI9Ied_wUPDVgpfDwQs2qo0aQmz/edit?usp=drivesdk" }]
-        },
-        {
-          date: "2025", title: { zh: "其他有助審查資料", en: "Additional Review Materials" },
-          organization: { zh: "研究著作、計畫、研討會與獎項彙整", en: "Consolidated research outputs, projects, conferences, and awards" }, type: { zh: "審查資料", en: "Review materials" },
-          evidence: [{ label: { zh: "審查資料 DOCX", en: "Review materials DOCX" }, url: REVIEW_DOC }]
-        }
-      ]
-    },
     {
       id: "education",
       title: { zh: "學歷、學位證書與成績單", en: "Education, Degrees & Transcripts" },
