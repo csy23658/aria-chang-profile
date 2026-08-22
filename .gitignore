@@ -18,6 +18,9 @@ private/
 .env.*
 !.env.example
 
+# Claude Code local config
+.claude/
+
 # Local tooling and temporary output
 .DS_Store
 Thumbs.db

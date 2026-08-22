@@ -8,9 +8,9 @@
       heroCopy: "需要填寫獎學金、補助或其他申請時，從這裡快速查找經歷、日期、正式名稱與相關佐證。",
       searchLabel: "搜尋申請資料", searchPlaceholder: "搜尋學校、證照、研究或年份…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "連結可以公開，文件仍然私人",
-      vaultCopy: "每個 ↗ 圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。",
+      vaultCopy: "每個📎圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。灰色📎表示尚缺佐證。",
       privacyShort: "連結可見；文件僅本人可開啟", export: "下載 CSV",
-      privateEvidence: "私人佐證", publicSource: "公開來源", missingDirect: "尚缺直接佐證", noResults: "找不到符合的紀錄",
+      privateEvidence: "私人佐證", publicSource: "公開來源", missingDirect: "尚缺直接佐證", filterMissing: "只顯示待補", noResults: "找不到符合的紀錄",
       resultCount: count => `顯示 ${count} 筆`,
       footer: "本頁是申請資料索引；佐證連結可見，但 Google Drive 文件維持僅限本人存取。",
       newWindow: "在新視窗開啟"
@@ -21,16 +21,16 @@
       heroCopy: "Use this index when preparing scholarship, grant, or other applications to quickly find dates, formal titles, experience details, and supporting evidence.",
       searchLabel: "Search application records", searchPlaceholder: "Search schools, credentials, research, or years…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "Links are visible; documents remain private",
-      vaultCopy: "Each ↗ icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request.",
+      vaultCopy: "Each 📎 icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request. A grey 📎 means evidence is still needed.",
       privacyShort: "Links are visible; files are owner-only", export: "Download CSV",
-      privateEvidence: "Private evidence", publicSource: "Public source", missingDirect: "Direct evidence needed", noResults: "No matching records",
+      privateEvidence: "Private evidence", publicSource: "Public source", missingDirect: "Direct evidence needed", filterMissing: "Missing only", noResults: "No matching records",
       resultCount: count => `${count} records shown`,
       footer: "This is an application record index. Evidence links are visible, while Google Drive files remain owner-only.",
       newWindow: "Open in a new window"
     }
   };
 
-  const state = { language: localStorage.getItem("profile-language") || "zh", query: "" };
+  const state = { language: localStorage.getItem("profile-language") || "zh", query: "", missingOnly: false };
   const data = window.PROFILE_DATA;
   const navigation = document.getElementById("site-navigation");
   const sectionsRoot = document.getElementById("profile-sections");
@@ -50,6 +50,8 @@
       </a>`).join("");
   }
 
+  const clipSvg = `<svg class="clip-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4.5 3a2.5 2.5 0 0 1 5 0v8a1.5 1.5 0 0 1-3 0V4.5a.5.5 0 0 1 1 0V11a.5.5 0 0 0 1 0V3a1.5 1.5 0 0 0-3 0v8a2.5 2.5 0 0 0 5 0V4.5a.5.5 0 0 1 1 0V11a3.5 3.5 0 0 1-7 0V3z"/></svg>`;
+
   function renderLinks(links, kind) {
     if (!links?.length) return "";
     const prefix = kind === "evidence" ? ui[state.language].privateEvidence : ui[state.language].publicSource;
@@ -57,7 +59,7 @@
       <a class="record-link ${kind}" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer"
          title="${escapeHtml(prefix)}：${escapeHtml(text(link.label))}"
          aria-label="${escapeHtml(prefix)}：${escapeHtml(text(link.label))} — ${ui[state.language].newWindow}">
-        <span aria-hidden="true">↗</span><span>${escapeHtml(text(link.label))}</span>
+        ${kind === "evidence" ? clipSvg : '<span aria-hidden="true">↗</span>'}<span>${escapeHtml(text(link.label))}</span>
       </a>`).join("");
   }
 
@@ -74,7 +76,7 @@
         <div class="record-list" role="list">
           ${section.items.map(item => {
             const searchText = [item.date, allLanguageText(item.title), allLanguageText(item.organization), allLanguageText(item.type)].join(" ").toLocaleLowerCase();
-            return `<article class="record-row" role="listitem" data-search="${escapeHtml(searchText)}">
+            return `<article class="record-row" role="listitem" data-search="${escapeHtml(searchText)}"${item.missingEvidence ? ' data-missing' : ''}>
               <div class="record-date">${escapeHtml(item.date)}</div>
               <div class="record-content">
                 <div class="record-heading"><h3>${escapeHtml(text(item.title))}</h3><span class="type-label">${escapeHtml(text(item.type))}</span></div>
@@ -83,7 +85,7 @@
               <div class="record-actions">
                 ${renderLinks(item.evidence, "evidence")}
                 ${renderLinks(item.publicLinks, "public")}
-                ${item.missingEvidence ? `<span class="missing-link">${ui[state.language].missingDirect}</span>` : ""}
+                ${item.missingEvidence ? `<span class="missing-link" title="${ui[state.language].missingDirect}">${clipSvg}<span>${ui[state.language].missingDirect}</span></span>` : ""}
               </div>
             </article>`;
           }).join("")}
@@ -97,9 +99,11 @@
     document.querySelectorAll(".profile-section").forEach(section => {
       let sectionVisible = 0;
       section.querySelectorAll(".record-row").forEach(row => {
-        const matches = !query || row.dataset.search.includes(query);
-        row.hidden = !matches;
-        if (matches) { visible += 1; sectionVisible += 1; }
+        const matchesQuery = !query || row.dataset.search.includes(query);
+        const matchesFilter = !state.missingOnly || row.hasAttribute("data-missing");
+        const show = matchesQuery && matchesFilter;
+        row.hidden = !show;
+        if (show) { visible += 1; sectionVisible += 1; }
       });
       section.hidden = sectionVisible === 0;
     });
@@ -140,6 +144,13 @@
     renderInterface();
   });
   searchInput.addEventListener("input", event => { state.query = event.target.value; applySearch(); });
+  const filterButton = document.getElementById("filter-missing");
+  filterButton.addEventListener("click", () => {
+    state.missingOnly = !state.missingOnly;
+    filterButton.setAttribute("aria-pressed", state.missingOnly);
+    filterButton.classList.toggle("active", state.missingOnly);
+    applySearch();
+  });
   document.getElementById("print-button").addEventListener("click", () => window.print());
   sectionsRoot.addEventListener("click", event => {
     const button = event.target.closest("[data-export]");
