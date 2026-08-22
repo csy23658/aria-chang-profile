@@ -15,7 +15,10 @@ window.PROFILE_DATA = {
         {
           date: "2025/09/01–", title: { zh: "博士班研究生（政法組）", en: "PhD Student, Policy and Law Division" },
           organization: { zh: "國立陽明交通大學醫學院公共衛生研究所；指導教授：梁立霖", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University; Advisor: Prof. Li-Lin Liang" }, type: { zh: "博士班", en: "Doctoral study" },
-          missingEvidence: true
+          evidence: [
+            { label: { zh: "114-1 成績單", en: "Semester 1 transcript" }, url: "https://drive.google.com/file/d/1sd_SSTXWSIx-Hpowu9xQE0cj9svqqDrj/view" },
+            { label: { zh: "114-2 成績單", en: "Semester 2 transcript" }, url: "https://drive.google.com/file/d/138J3aMe6gl7l2wxokVaaFmLD-7UFNXJT/view" }
+          ]
         },
         {
           date: "2022", title: { zh: "高齡福祉科技碩士", en: "Master’s Degree in Gerontechnology" },
