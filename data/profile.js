@@ -4,8 +4,8 @@ window.PROFILE_DATA = {
     affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },
     address: { zh: "112 台北市北投區立農街二段 155 號", en: "No. 155, Sec. 2, Linong St., Beitou Dist., Taipei 112, Taiwan" },
     advisor: { zh: "指導教授：梁立霖", en: "Advisor: Prof. Li-Lin Liang" },
-    orcid: "0000-0000-0000-0000",
-    interests: { zh: "公共衛生、老年科技、虛擬實境照護、數位健康", en: "Public Health, Gerontechnology, VR-based Care, Digital Health" }
+    orcid: "0000-0003-0010-9324",
+    interests: { zh: "公共衛生、老年科技、虛擬實境照護、數位健康、AI 介入設計", en: "Public Health, Gerontechnology, VR-based Care, Digital Health, AI Intervention Design" }
   },
   sections: [
     {
