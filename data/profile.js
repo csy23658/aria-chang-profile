@@ -1,4 +1,5 @@
 window.PROFILE_DATA = {
+  lastUpdated: "2026-09-29",
   frontMatter: {
     position: { zh: "博士班研究生", en: "PhD Student" },
     affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },

@@ -44,6 +44,8 @@ a:hover { color: var(--accent); }
 .hero { padding: .7rem 0 1rem; border-bottom: 2px solid var(--ink); }
 .hero h2 { margin: 0; font-family: Georgia, "Noto Serif TC", serif; font-size: clamp(1.75rem, 4vw, 2.7rem); font-weight: 500; line-height: 1.05; }
 .hero-copy { max-width: 50rem; margin: .4rem 0 0; color: var(--muted); font-size: .88rem; }
+.last-updated { margin: .3rem 0 0; color: var(--muted); font-size: .78rem; letter-spacing: .02em; }
+.last-updated:empty { display: none; }
 .utility-bar { display: flex; gap: .8rem; align-items: center; margin-top: .75rem; }
 .search-box { flex: 1; }
 .search-box input { width: 100%; min-height: 2.35rem; padding: .45rem .7rem; border: 1px solid #bfc9c4; border-radius: .35rem; background: white; color: var(--ink); font-size: .82rem; }

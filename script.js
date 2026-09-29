@@ -3,31 +3,33 @@
 
   const ui = {
     zh: {
-      skip: "跳至主要內容", sidebarSummary: "申請資料與佐證文件索引", print: "列印",
-      heroEyebrow: "APPLICATION RECORD INDEX", heroTitle: "申請資料索引",
+      skip: "跳至主要內容", sidebarSummary: "學經歷與佐證文件總覽", print: "列印",
+      heroEyebrow: "CV & EVIDENCE", heroTitle: "學術與專業履歷",
       heroCopy: "需要填寫獎學金、補助或其他申請時，從這裡快速查找經歷、日期、正式名稱與相關佐證。",
-      searchLabel: "搜尋申請資料", searchPlaceholder: "搜尋學校、證照、研究或年份…",
+      searchLabel: "搜尋紀錄", searchPlaceholder: "搜尋學校、證照、研究或年份…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "連結可以公開，文件仍然私人",
       vaultCopy: "每個📎圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。灰色📎表示尚缺佐證。",
       privacyShort: "連結可見；文件僅本人可開啟", export: "下載 CSV",
       fmPosition: "現職", fmAffiliation: "所屬單位", fmAddress: "地址", fmAdvisor: "指導教授", fmOrcid: "ORCID", fmInterests: "研究興趣",
       privateEvidence: "私人佐證", publicSource: "公開來源", missingDirect: "尚缺直接佐證", filterMissing: "只顯示待補", noResults: "找不到符合的紀錄",
       resultCount: count => `顯示 ${count} 筆`,
-      footer: "本頁是申請資料索引；佐證連結可見，但 Google Drive 文件維持僅限本人存取。",
+      footer: "本頁為學術與專業履歷；佐證連結可見，但 Google Drive 文件維持僅限本人存取。",
+      lastUpdated: date => `最後更新：${date}`,
       newWindow: "在新視窗開啟"
     },
     en: {
-      skip: "Skip to main content", sidebarSummary: "Application records and evidence index", print: "Print",
-      heroEyebrow: "APPLICATION RECORD INDEX", heroTitle: "Application Record Index",
+      skip: "Skip to main content", sidebarSummary: "Academic and professional records with evidence", print: "Print",
+      heroEyebrow: "CV & EVIDENCE", heroTitle: "Academic & Professional Portfolio",
       heroCopy: "Use this index when preparing scholarship, grant, or other applications to quickly find dates, formal titles, experience details, and supporting evidence.",
-      searchLabel: "Search application records", searchPlaceholder: "Search schools, credentials, research, or years…",
+      searchLabel: "Search records", searchPlaceholder: "Search schools, credentials, research, or years…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "Links are visible; documents remain private",
       vaultCopy: "Each 📎 icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request. A grey 📎 means evidence is still needed.",
       privacyShort: "Links are visible; files are owner-only", export: "Download CSV",
       fmPosition: "Position", fmAffiliation: "Affiliation", fmAddress: "Address", fmAdvisor: "Advisor", fmOrcid: "ORCID", fmInterests: "Research Interests",
       privateEvidence: "Private evidence", publicSource: "Public source", missingDirect: "Direct evidence needed", filterMissing: "Missing only", noResults: "No matching records",
       resultCount: count => `${count} records shown`,
-      footer: "This is an application record index. Evidence links are visible, while Google Drive files remain owner-only.",
+      footer: "This is an academic and professional portfolio. Evidence links are visible, while Google Drive files remain owner-only.",
+      lastUpdated: date => `Last updated: ${date}`,
       newWindow: "Open in a new window"
     }
   };
@@ -133,6 +135,8 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = ui[state.language][element.dataset.i18nPlaceholder]; });
     languageButton.textContent = state.language === "zh" ? "EN" : "中文";
     languageButton.setAttribute("aria-label", state.language === "zh" ? "Switch to English" : "切換為中文");
+    const lastUpdated = document.getElementById("last-updated");
+    lastUpdated.textContent = data.lastUpdated ? ui[state.language].lastUpdated(data.lastUpdated) : "";
     renderNavigation();
     renderFrontMatter();
     renderSections();
