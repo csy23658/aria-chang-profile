@@ -5,7 +5,6 @@
     zh: {
       skip: "跳至主要內容", sidebarSummary: "學經歷與佐證文件總覽", print: "列印",
       heroEyebrow: "CV & EVIDENCE", heroTitle: "學術與專業履歷",
-      heroCopy: "需要填寫獎學金、補助或其他申請時，從這裡快速查找經歷、日期、正式名稱與相關佐證。",
       searchLabel: "搜尋紀錄", searchPlaceholder: "搜尋學校、證照、研究或年份…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "連結可以公開，文件仍然私人",
       vaultCopy: "每個📎圖示會開啟相關佐證。只有登入本人 Google 帳號時可以查看；其他訪客會看到權限要求。灰色📎表示尚缺佐證。",
@@ -20,7 +19,6 @@
     en: {
       skip: "Skip to main content", sidebarSummary: "Academic and professional records with evidence", print: "Print",
       heroEyebrow: "CV & EVIDENCE", heroTitle: "Academic & Professional Portfolio",
-      heroCopy: "Use this index when preparing scholarship, grant, or other applications to quickly find dates, formal titles, experience details, and supporting evidence.",
       searchLabel: "Search records", searchPlaceholder: "Search schools, credentials, research, or years…",
       vaultEyebrow: "OWNER-ONLY GOOGLE DRIVE", vaultTitle: "Links are visible; documents remain private",
       vaultCopy: "Each 📎 icon opens supporting evidence. Only the signed-in owner can view the file; other visitors will see an access request. A grey 📎 means evidence is still needed.",
