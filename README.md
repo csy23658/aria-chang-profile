@@ -12,7 +12,7 @@
 
 ## 更新內容
 
-公開紀錄集中在 `data/profile.js`。每次修改內容時，請一併更新檔案開頭的 `lastUpdated`（YYYY-MM-DD），網站會顯示為「最後更新」日期。每筆資料可包含：
+公開紀錄集中在 `data/profile.js`。每次修改內容時，請一併更新檔案開頭的 `lastUpdated`（YYYY-MM-DD），網站會顯示為「最後更新」日期。同時把 `index.html` 中 `styles.css`、`data/profile.js`、`script.js` 後面的 `?v=` 版本號改成相同日期（格式 YYYYMMDD；同一天再次更新時可加 `-2`、`-3`），讓瀏覽器立即載入新檔，而不是沿用快取。每筆資料可包含：
 
 - `date`：年份或期間
 - `title.zh` / `title.en`：中英文名稱
