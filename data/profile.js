@@ -41,6 +41,17 @@ window.PROFILE_DATA = {
       ]
     },
     {
+      id: "experience",
+      title: { zh: "職涯經歷", en: "Professional Experience" },
+      items: [
+        { date: "2019–2025", title: { zh: "首席顧問暨業務發展總監", en: "Principal Consultant & BD Director" }, organization: { zh: "Manekineko Ventures Inc.，台北；數位轉型與資料分析策略顧問", en: "Manekineko Ventures Inc., Taipei; digital-transformation and data-analytics strategy consulting" }, type: { zh: "顧問", en: "Consulting" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
+        { date: "2016–2018", title: { zh: "大中華區業務發展總監（台灣、香港、澳門負責人）", en: "Business Development Director, Greater China (Head of Taiwan, Hong Kong & Macau)" }, organization: { zh: "Unity Technologies；遊戲引擎與教育產品授權、政府及開發者生態系合作", en: "Unity Technologies; engine and EDU licensing, government and developer-ecosystem partnerships" }, type: { zh: "科技業", en: "Technology" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
+        { date: "2011–2015", title: { zh: "總裁暨營運長；營運長", en: "President & COO; COO" }, organization: { zh: "Winking Entertainment（上海、南京、台北、首爾，300+ 人，含 PC VR 遊戲開發）；Century Innovative Technology（香港／北京，App 開發與發行）", en: "Winking Entertainment (Shanghai, Nanjing, Taipei, Seoul; 300+ staff; incl. PC VR game development); Century Innovative Technology (Hong Kong/Beijing; app development and publishing)" }, type: { zh: "高階主管", en: "Executive" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
+        { date: "2003–2011", title: { zh: "國際業務發展總監 → 業務發展副總 → 執行副總", en: "International BD Director → VP of Business Development → Executive Vice President" }, organization: { zh: "InterServ International Inc.；與 Microsoft、EA、Sega 等簽訂共同開發與發行合約，美術外包業務躋身中國前三大", en: "InterServ International Inc.; co-development and publishing deals with Microsoft, EA, Sega and others; grew art outsourcing to top 3 in China" }, type: { zh: "遊戲產業", en: "Games industry" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
+        { date: "1995–2002", title: { zh: "共同創辦人；遊戲事業部副總", en: "Co-Founder; VP of Games Division" }, organization: { zh: "Seeds4Kids Multimedia（上海兒童多媒體學校）；SMEC Media & Entertainment（兒童軟體行銷、遊戲發行、遊戲雜誌總編輯）", en: "Seeds4Kids Multimedia (children’s multimedia school, Shanghai); SMEC Media & Entertainment (children’s software marketing, game publishing, gaming magazine editor-in-chief)" }, type: { zh: "創業／媒體", en: "Startup / Media" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] }
+      ]
+    },
+    {
       id: "credentials",
       title: { zh: "專業訓練與證照", en: "Professional Credentials" },
       items: [
