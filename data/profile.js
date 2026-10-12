@@ -1,5 +1,5 @@
 window.PROFILE_DATA = {
-  lastUpdated: "2026-09-29",
+  lastUpdated: "2026-10-13",
   frontMatter: {
     position: { zh: "博士班研究生", en: "PhD Student" },
     affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },
@@ -102,6 +102,13 @@ window.PROFILE_DATA = {
         { date: "2021", title: { zh: "高齡福祉科技研討會論文發表佳作獎", en: "Merit Award, Conference Paper Presentation" }, organization: { zh: "高齡福祉科技研討會", en: "Conference on Gerontechnology and Welfare Technology" }, type: { zh: "獎項", en: "Award" }, evidence: [{ label: { zh: "獲獎紀錄 PDF", en: "Award record PDF" }, url: "https://drive.google.com/file/d/1Q5Rx4C5-mtH1DPuKF2Mz4FlLi9HH7T1U/view" }] },
         { date: "2021", title: { zh: "研究生壁報競賽佳作獎", en: "Merit Award, Graduate Student Poster Competition" }, organization: { zh: "馬偕醫學院", en: "Mackay Medical College" }, type: { zh: "獎項", en: "Award" }, evidence: [{ label: { zh: "獲獎紀錄 PDF", en: "Award record PDF" }, url: "https://drive.google.com/file/d/1NSc52fz9Y_uQrH58iHDjcFt98myxrrkl/view" }] },
         { date: "2021", title: { zh: "圖書館整合查詢館際三冠王活動第三名", en: "Third Place, Library Integrated Discovery Challenge" }, organization: { zh: "馬偕醫學院圖書館", en: "Mackay Medical College Library" }, type: { zh: "獎項", en: "Award" }, evidence: [{ label: { zh: "獎狀", en: "Award certificate" }, url: "https://drive.google.com/file/d/1oM42ZAnmIG-xL0erraSG16VOwJG_Y5sN/view" }] }
+      ]
+    },
+    {
+      id: "service", title: { zh: "學術服務", en: "Academic Service" },
+      items: [
+        { date: "2026/10/22", title: { zh: "Flash Oral Presentation Session 1 & 2 主持人", en: "Moderator, Flash Oral Presentation Session 1 & 2" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, missingEvidence: true },
+        { date: "2026/10/23", title: { zh: "Oral Session O19：Leveraging High Technology to Improve Population Health (III) 主持人", en: "Moderator, Oral Session O19: Leveraging High Technology to Improve Population Health (III)" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, missingEvidence: true }
       ]
     },
     {
