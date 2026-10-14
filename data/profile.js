@@ -1,5 +1,5 @@
 window.PROFILE_DATA = {
-  lastUpdated: "2026-10-13",
+  lastUpdated: "2026-10-14",
   frontMatter: {
     position: { zh: "博士班研究生", en: "PhD Student" },
     affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },
@@ -107,8 +107,8 @@ window.PROFILE_DATA = {
     {
       id: "service", title: { zh: "學術服務", en: "Academic Service" },
       items: [
-        { date: "2026/10/22", title: { zh: "Flash Oral Presentation Session 1 & 2 主持人", en: "Moderator, Flash Oral Presentation Session 1 & 2" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, missingEvidence: true },
-        { date: "2026/10/23", title: { zh: "Oral Session O19：Leveraging High Technology to Improve Population Health (III) 主持人", en: "Moderator, Oral Session O19: Leveraging High Technology to Improve Population Health (III)" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, missingEvidence: true }
+        { date: "2026/10/22", title: { zh: "Flash Oral Presentation Session 1 & 2 主持人", en: "Moderator, Flash Oral Presentation Session 1 & 2" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, evidence: [{ label: { zh: "接受邀請回覆信", en: "Acceptance reply" }, url: "https://drive.google.com/file/d/12SFLvn_99SiMYB0erfhPb95qKsNeB2xu/view" }] },
+        { date: "2026/10/23", title: { zh: "Oral Session O19：Leveraging High Technology to Improve Population Health (III) 主持人", en: "Moderator, Oral Session O19: Leveraging High Technology to Improve Population Health (III)" }, organization: { zh: "APACPH 2026 亞太公共衛生學術聯盟年會，台南", en: "APACPH 2026 Conference, Tainan, Taiwan" }, type: { zh: "場次主持人", en: "Session Moderator" }, evidence: [{ label: { zh: "接受邀請回覆信", en: "Acceptance reply" }, url: "https://drive.google.com/file/d/1p-d5vNYk8n3g4aSns7YVsEbyKA74RMYO/view" }] }
       ]
     },
     {
