@@ -1,5 +1,5 @@
 window.PROFILE_DATA = {
-  lastUpdated: "2026-11-24",
+  lastUpdated: "2026-11-26",
   frontMatter: {
     position: { zh: "博士班研究生", en: "PhD Student" },
     affiliation: { zh: "國立陽明交通大學 醫學院公共衛生研究所", en: "Institute of Public Health, College of Medicine, National Yang Ming Chiao Tung University" },
@@ -45,6 +45,8 @@ window.PROFILE_DATA = {
       id: "experience",
       title: { zh: "職涯經歷", en: "Professional Experience" },
       items: [
+        { date: "2026–2027", title: { zh: "研究獎助生", en: "Graduate Research Fellow" }, organization: { zh: "國立陽明交通大學；「COVID-19 疫情期間醫院降載對肝癌患者死亡風險的影響：基於實證證據建立數位孿生模型」計畫（計畫主持人：梁立霖教授），聘期 2026/09–2027/07", en: "National Yang Ming Chiao Tung University; project “Impact of Hospital Service Reductions During the COVID-19 Pandemic on Mortality Risk Among Liver Cancer Patients: An Evidence-Based Digital Twin Model” (PI: Prof. Li-Lin Liang), Sep 2026–Jul 2027" }, type: { zh: "研究職務", en: "Research appointment" }, missingEvidence: true },
+        { date: "2026", title: { zh: "研究獎助生", en: "Graduate Research Fellow" }, organization: { zh: "國立陽明交通大學；衛生福利部「跨機構多面向肝細胞癌整合轉譯研究，以發展肝細胞癌預防及治療策略，並進行統合分析、成本效益及健康照護不平等評估」計畫（計畫主持人：吳俊穎教授），聘期 2026/05–2026/11", en: "National Yang Ming Chiao Tung University; Ministry of Health and Welfare project on multi-institutional, multidimensional integrated translational research in hepatocellular carcinoma (prevention and treatment strategies, meta-analysis, cost-effectiveness, and health-care inequity assessment) (PI: Prof. Chun-Ying Wu), May–Nov 2026" }, type: { zh: "研究職務", en: "Research appointment" }, missingEvidence: true },
         { date: "2019–2025", title: { zh: "首席顧問暨業務發展總監", en: "Principal Consultant & BD Director" }, organization: { zh: "Manekineko Ventures Inc.，台北；數位轉型與資料分析策略顧問", en: "Manekineko Ventures Inc., Taipei; digital-transformation and data-analytics strategy consulting" }, type: { zh: "顧問", en: "Consulting" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
         { date: "2016–2018", title: { zh: "大中華區業務發展總監（台灣、香港、澳門負責人）", en: "Business Development Director, Greater China (Head of Taiwan, Hong Kong & Macau)" }, organization: { zh: "Unity Technologies；遊戲引擎與教育產品授權、政府及開發者生態系合作", en: "Unity Technologies; engine and EDU licensing, government and developer-ecosystem partnerships" }, type: { zh: "科技業", en: "Technology" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
         { date: "2011–2015", title: { zh: "總裁暨營運長；營運長", en: "President & COO; COO" }, organization: { zh: "Winking Entertainment（上海、南京、台北、首爾，300+ 人，含 PC VR 遊戲開發）；Century Innovative Technology（香港／北京，App 開發與發行）", en: "Winking Entertainment (Shanghai, Nanjing, Taipei, Seoul; 300+ staff; incl. PC VR game development); Century Innovative Technology (Hong Kong/Beijing; app development and publishing)" }, type: { zh: "高階主管", en: "Executive" }, publicLinks: [{ label: { zh: "LinkedIn", en: "LinkedIn" }, url: "https://www.linkedin.com/in/ariachang" }] },
